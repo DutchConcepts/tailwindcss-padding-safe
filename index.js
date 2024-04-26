@@ -57,32 +57,32 @@ module.exports = plugin(function ({ addUtilities, e, config }) {
     (size, modifier) => ({
       '@supports(padding: max(0px))': {
         [`.${e(`p-${modifier}-${paddingSuffix}`)}`]: {
-          'padding-top': `max(${size}, env(safe-area-inset-top))`,
-          'padding-bottom': `max(${size}, env(safe-area-inset-bottom))`,
-          'padding-left': `max(${size}, env(safe-area-inset-left))`,
-          'padding-right': `max(${size}, env(safe-area-inset-right))`,
+          'padding-top': `max(${size}, var(--safe-area-inset-top))`,
+          'padding-bottom': `max(${size}, var(--safe-area-inset-bottom))`,
+          'padding-left': `max(${size}, var(--safe-area-inset-left))`,
+          'padding-right': `max(${size}, var(--safe-area-inset-right))`,
         },
 
         [`.${e(`py-${modifier}-${paddingSuffix}`)}`]: {
-          'padding-top': `max(${size}, env(safe-area-inset-top))`,
-          'padding-bottom': `max(${size}, env(safe-area-inset-bottom))`,
+          'padding-top': `max(${size}, var(--safe-area-inset-top))`,
+          'padding-bottom': `max(${size}, var(--safe-area-inset-bottom))`,
         },
         [`.${e(`px-${modifier}-${paddingSuffix}`)}`]: {
-          'padding-left': `max(${size}, env(safe-area-inset-left))`,
-          'padding-right': `max(${size}, env(safe-area-inset-right))`,
+          'padding-left': `max(${size}, var(--safe-area-inset-left))`,
+          'padding-right': `max(${size}, var(--safe-area-inset-right))`,
         },
 
         [`.${e(`pt-${modifier}-${paddingSuffix}`)}`]: {
-          'padding-top': `max(${size}, env(safe-area-inset-top))`,
+          'padding-top': `max(${size}, var(--safe-area-inset-top))`,
         },
         [`.${e(`pr-${modifier}-${paddingSuffix}`)}`]: {
-          'padding-right': `max(${size}, env(safe-area-inset-right))`,
+          'padding-right': `max(${size}, var(--safe-area-inset-right))`,
         },
         [`.${e(`pb-${modifier}-${paddingSuffix}`)}`]: {
-          'padding-bottom': `max(${size}, env(safe-area-inset-bottom))`,
+          'padding-bottom': `max(${size}, var(--safe-area-inset-bottom))`,
         },
         [`.${e(`pl-${modifier}-${paddingSuffix}`)}`]: {
-          'padding-left': `max(${size}, env(safe-area-inset-left))`,
+          'padding-left': `max(${size}, var(--safe-area-inset-left))`,
         },
       },
     }),
@@ -146,32 +146,32 @@ module.exports = plugin(function ({ addUtilities, e, config }) {
     (size, modifier) => ({
       '@supports(margin: max(0px))': {
         [`.${e(`m-${modifier}-${marginSuffix}`)}`]: {
-          'margin-top': `max(${size}, env(safe-area-inset-top))`,
-          'margin-bottom': `max(${size}, env(safe-area-inset-bottom))`,
-          'margin-left': `max(${size}, env(safe-area-inset-left))`,
-          'margin-right': `max(${size}, env(safe-area-inset-right))`,
+          'margin-top': `max(${size}, var(--safe-area-inset-top))`,
+          'margin-bottom': `max(${size}, var(--safe-area-inset-bottom))`,
+          'margin-left': `max(${size}, var(--safe-area-inset-left))`,
+          'margin-right': `max(${size}, var(--safe-area-inset-right))`,
         },
 
         [`.${e(`my-${modifier}-${marginSuffix}`)}`]: {
-          'margin-top': `max(${size}, env(safe-area-inset-top))`,
-          'margin-bottom': `max(${size}, env(safe-area-inset-bottom))`,
+          'margin-top': `max(${size}, var(--safe-area-inset-top))`,
+          'margin-bottom': `max(${size}, var(--safe-area-inset-bottom))`,
         },
         [`.${e(`mx-${modifier}-${marginSuffix}`)}`]: {
-          'margin-left': `max(${size}, env(safe-area-inset-left))`,
-          'margin-right': `max(${size}, env(safe-area-inset-right))`,
+          'margin-left': `max(${size}, var(--safe-area-inset-left))`,
+          'margin-right': `max(${size}, var(--safe-area-inset-right))`,
         },
 
         [`.${e(`mt-${modifier}-${marginSuffix}`)}`]: {
-          'margin-top': `max(${size}, env(safe-area-inset-top))`,
+          'margin-top': `max(${size}, var(--safe-area-inset-top))`,
         },
         [`.${e(`mr-${modifier}-${marginSuffix}`)}`]: {
-          'margin-right': `max(${size}, env(safe-area-inset-right))`,
+          'margin-right': `max(${size}, var(--safe-area-inset-right))`,
         },
         [`.${e(`mb-${modifier}-${marginSuffix}`)}`]: {
-          'margin-bottom': `max(${size}, env(safe-area-inset-bottom))`,
+          'margin-bottom': `max(${size}, var(--safe-area-inset-bottom))`,
         },
         [`.${e(`ml-${modifier}-${marginSuffix}`)}`]: {
-          'margin-left': `max(${size}, env(safe-area-inset-left))`,
+          'margin-left': `max(${size}, var(--safe-area-inset-left))`,
         },
       },
     }),
@@ -187,43 +187,43 @@ module.exports = plugin(function ({ addUtilities, e, config }) {
   const utilities = [
     {
       '.p-safe': {
-        'padding-top': 'env(safe-area-inset-top)',
-        'padding-bottom': 'env(safe-area-inset-bottom)',
-        'padding-left': 'env(safe-area-inset-left)',
-        'padding-right': 'env(safe-area-inset-right)',
+        'padding-top': 'var(--safe-area-inset-top)',
+        'padding-bottom': 'var(--safe-area-inset-bottom)',
+        'padding-left': 'var(--safe-area-inset-left)',
+        'padding-right': 'var(--safe-area-inset-right)',
       },
       '.py-safe': {
-        'padding-top': 'env(safe-area-inset-top)',
-        'padding-bottom': 'env(safe-area-inset-bottom)',
+        'padding-top': 'var(--safe-area-inset-top)',
+        'padding-bottom': 'var(--safe-area-inset-bottom)',
       },
       '.px-safe': {
-        'padding-left': 'env(safe-area-inset-left)',
-        'padding-right': 'env(safe-area-inset-right)',
+        'padding-left': 'var(--safe-area-inset-left)',
+        'padding-right': 'var(--safe-area-inset-right)',
       },
-      '.pt-safe': { 'padding-top': 'env(safe-area-inset-top)' },
-      '.pr-safe': { 'padding-right': 'env(safe-area-inset-right)' },
-      '.pb-safe': { 'padding-bottom': 'env(safe-area-inset-bottom)' },
-      '.pl-safe': { 'padding-left': 'env(safe-area-inset-left)' },
+      '.pt-safe': { 'padding-top': 'var(--safe-area-inset-top)' },
+      '.pr-safe': { 'padding-right': 'var(--safe-area-inset-right)' },
+      '.pb-safe': { 'padding-bottom': 'var(--safe-area-inset-bottom)' },
+      '.pl-safe': { 'padding-left': 'var(--safe-area-inset-left)' },
     },
     {
       '.m-safe': {
-        'margin-top': 'env(safe-area-inset-top)',
-        'margin-bottom': 'env(safe-area-inset-bottom)',
-        'margin-left': 'env(safe-area-inset-left)',
-        'margin-right': 'env(safe-area-inset-right)',
+        'margin-top': 'var(--safe-area-inset-top)',
+        'margin-bottom': 'var(--safe-area-inset-bottom)',
+        'margin-left': 'var(--safe-area-inset-left)',
+        'margin-right': 'var(--safe-area-inset-right)',
       },
       '.my-safe': {
-        'margin-top': 'env(safe-area-inset-top)',
-        'margin-bottom': 'env(safe-area-inset-bottom)',
+        'margin-top': 'var(--safe-area-inset-top)',
+        'margin-bottom': 'var(--safe-area-inset-bottom)',
       },
       '.mx-safe': {
-        'margin-left': 'env(safe-area-inset-left)',
-        'margin-right': 'env(safe-area-inset-right)',
+        'margin-left': 'var(--safe-area-inset-left)',
+        'margin-right': 'var(--safe-area-inset-right)',
       },
-      '.mt-safe': { 'margin-top': 'env(safe-area-inset-top)' },
-      '.mr-safe': { 'margin-right': 'env(safe-area-inset-right)' },
-      '.mb-safe': { 'margin-bottom': 'env(safe-area-inset-bottom)' },
-      '.ml-safe': { 'margin-left': 'env(safe-area-inset-left)' },
+      '.mt-safe': { 'margin-top': 'var(--safe-area-inset-top)' },
+      '.mr-safe': { 'margin-right': 'var(--safe-area-inset-right)' },
+      '.mb-safe': { 'margin-bottom': 'var(--safe-area-inset-bottom)' },
+      '.ml-safe': { 'margin-left': 'var(--safe-area-inset-left)' },
     },
   ];
 
